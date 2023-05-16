@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <title>Speed Typing</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            padding: 25px;
+            margin: 20px;
+            width: calc(80% - 50px);
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 24px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .quote-display{
+            background-color: black;
+            color: white;
+            margin: 20px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+        }
+        .start-btn{
+            display: flex;
+            align-items: center;
+        }
+        #start{
+            padding: 7px 12px;
+            font-size: 18px;
+            margin-right: 20px;
+            border: none;
+            background-color: rgb(226, 226, 226);
+            cursor: pointer;
+        }
+        #start:hover{
+            background-color: rgb(204, 204, 204);
+        }
+        input{
+            font-size: 20px;
+            padding: 15px;
+            width: calc(100% - 30px);
+            border: 1px solid rgb(202, 202, 202);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="start-btn">
+            <button id="start">Start Timer</button>
+            <div id="timer">Timer : <span id="time">0</span></div>
+        </div>
+        <div class="quote-display"></div>
+        <input id="quoteInput" type="text" ondrop="return false;" onpaste="return false;">
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
